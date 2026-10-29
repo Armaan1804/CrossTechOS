@@ -14,8 +14,9 @@
     @media (max-width: 900px) { .docs-layout { grid-template-columns: 1fr; } }
     .docs-sidebar { position: sticky; top: 100px; height: fit-content; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; }
     .docs-nav-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.65rem; }
-    .docs-nav-link { font-size: 0.875rem; color: #64748b; text-decoration: none; font-weight: 600; display: block; padding: 0.35rem 0.5rem; border-radius: 6px; }
-    .docs-nav-link:hover, .docs-nav-link.active { color: #7c3aed; background: #f3e8ff; }
+    .docs-nav-link { font-size: 0.875rem; color: #64748b; text-decoration: none; font-weight: 600; display: block; padding: 0.45rem 0.75rem; border-radius: 8px; transition: all 0.2s ease; border-left: 3px solid transparent; }
+    .docs-nav-link:hover { color: #e11d48; background: #fff1f2; }
+    .docs-nav-link.active { color: #e11d48; background: #ffe4e6; font-weight: 700; border-left: 3px solid #e11d48; }
     .docs-section { margin-bottom: 4rem; scroll-margin-top: 120px; }
     .docs-section h2 { font-size: 1.85rem; font-weight: 800; color: #0f172a; margin-top: 0; margin-bottom: 0.75rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.75rem; }
     .docs-section p { color: #475569; font-size: 0.95rem; line-height: 1.6; }
@@ -25,16 +26,14 @@
 <body>
 
   <!-- NAV -->
+  <!-- NAVIGATION -->
   <header class="nav-wrapper" id="navbar">
     <nav class="nav-inner container">
       <a href="index.html" class="nav-logo" aria-label="CrossTech Construction OS Home">
-        <span class="logo-mark">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M4 21V9l8-6 8 6v12h-6v-7h-4v7H4z" fill="white" />
-          </svg>
-        </span>
+        <span class="logo-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 21V9l8-6 8 6v12h-6v-7h-4v7H4z" fill="white" /></svg></span>
         <span class="logo-text">CrossTech Construction OS</span>
       </a>
+
       <ul class="nav-links" role="list">
         <!-- FEATURES -->
         <li class="nav-item has-dropdown">
@@ -45,23 +44,23 @@
                 <p class="mega-section-label">FINANCIAL &amp; FIELD MODULES</p>
                 <div class="mega-cols" style="grid-template-columns: repeat(2, 1fr); gap: 0.75rem;">
                   <a href="features/central-wallet.html" class="mega-item" role="menuitem">
-                    <span class="mega-ico" style="background:#f3e8ff;color:#7c3aed;">🏛️</span>
+                    <span class="mega-ico" style="background:#ffe4e6;color:#e11d48;">🏛</span>
                     <div><strong>Central Wallet</strong><p>Single source of truth for organization capital</p></div>
                   </a>
                   <a href="features/overdraft.html" class="mega-item" role="menuitem">
-                    <span class="mega-ico" style="background:#f3e8ff;color:#7c3aed;">⚡</span>
+                    <span class="mega-ico" style="background:#ffe4e6;color:#e11d48;">⚡</span>
                     <div><strong>Controlled Overdraft</strong><p>Zero-work-stoppage deficit tolerance</p></div>
                   </a>
                   <a href="features/mobile-field.html" class="mega-item" role="menuitem">
-                    <span class="mega-ico" style="background:#f3e8ff;color:#7c3aed;">📱</span>
+                    <span class="mega-ico" style="background:#ffe4e6;color:#e11d48;">📱</span>
                     <div><strong>Mobile Field PWA</strong><p>48px touch targets &amp; WebP camera capture</p></div>
                   </a>
                   <a href="features/offline-sync.html" class="mega-item" role="menuitem">
-                    <span class="mega-ico" style="background:#f3e8ff;color:#7c3aed;">🔄</span>
+                    <span class="mega-ico" style="background:#ffe4e6;color:#e11d48;">🔄</span>
                     <div><strong>Offline-First Sync</strong><p>Dexie.js IndexedDB resilience for basements</p></div>
                   </a>
                   <a href="features/desktop-erp.html" class="mega-item" role="menuitem">
-                    <span class="mega-ico" style="background:#f3e8ff;color:#7c3aed;">📊</span>
+                    <span class="mega-ico" style="background:#ffe4e6;color:#e11d48;">📊</span>
                     <div><strong>Super Admin ERP</strong><p>Multi-site burn analytics &amp; audit packs</p></div>
                   </a>
                 </div>
@@ -79,15 +78,15 @@
                 <p class="mega-section-label">PERSONA-SPECIFIC SOLUTIONS</p>
                 <div class="mega-cols" style="grid-template-columns: 1fr; gap: 0.5rem;">
                   <a href="solutions/general-contractors.html" class="mega-item" role="menuitem">
-                    <span class="mega-ico" style="background:#f3e8ff;color:#7c3aed;">🏗️</span>
+                    <span class="mega-ico" style="background:#ffe4e6;color:#e11d48;">🏗</span>
                     <div><strong>General Contractors</strong><p>Multi-site oversight &amp; subcontractor cash governance</p></div>
                   </a>
                   <a href="solutions/sub-contractors.html" class="mega-item" role="menuitem">
-                    <span class="mega-ico" style="background:#f3e8ff;color:#7c3aed;">🔨</span>
+                    <span class="mega-ico" style="background:#ffe4e6;color:#e11d48;">🔨</span>
                     <div><strong>Trade Subcontractors</strong><p>Daily labor bata, fuel vouchers &amp; 1-site free tier</p></div>
                   </a>
                   <a href="solutions/real-estate-dev.html" class="mega-item" role="menuitem">
-                    <span class="mega-ico" style="background:#f3e8ff;color:#7c3aed;">🏢</span>
+                    <span class="mega-ico" style="background:#ffe4e6;color:#e11d48;">🏢</span>
                     <div><strong>Property Developers</strong><p>Capital auditing, investor escrow proof &amp; zero bleed</p></div>
                   </a>
                 </div>
@@ -105,11 +104,11 @@
                 <p class="mega-section-label">COMPETITIVE BREAKDOWNS</p>
                 <div class="mega-cols" style="grid-template-columns: 1fr; gap: 0.5rem;">
                   <a href="compare/procore.html" class="mega-item" role="menuitem">
-                    <span class="mega-ico" style="background:#f3e8ff;color:#7c3aed;">⚔️</span>
+                    <span class="mega-ico" style="background:#ffe4e6;color:#e11d48;">⚔</span>
                     <div><strong>CrossTech vs Procore</strong><p>Anti-bloat self-serve vs $20k-$80k annual contracts</p></div>
                   </a>
                   <a href="compare/buildertrend.html" class="mega-item" role="menuitem">
-                    <span class="mega-ico" style="background:#f3e8ff;color:#7c3aed;">⚖️</span>
+                    <span class="mega-ico" style="background:#ffe4e6;color:#e11d48;">⚖</span>
                     <div><strong>CrossTech vs Buildertrend</strong><p>Jobsite cash &amp; field ledger vs residential design boards</p></div>
                   </a>
                 </div>
@@ -120,12 +119,14 @@
 
         <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
         <li class="nav-item"><a href="security.html" class="nav-link">Security</a></li>
-        <li class="nav-item"><a href="docs.html" class="nav-link" style="color:#7c3aed;font-weight:700;">Docs</a></li>
+        <li class="nav-item"><a href="docs.html" class="nav-link">Docs</a></li>
         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
       </ul>
+
       <div class="nav-actions">
-        <a href="demo.html" class="btn-nav-demo">Book a demo</a>
+        <a href="pricing.html" class="btn-nav-demo">Book a demo</a>
       </div>
+
       <button class="nav-mobile-toggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -136,18 +137,15 @@
   <section class="hero" id="hero">
     <div class="hero-inner container">
       <div class="hero-content">
-        <div style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.35rem 0.85rem; border-radius:100px; background:rgba(168,85,247,0.15); border:1px solid rgba(216,180,254,0.3); color:#e9d5ff; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:1rem;">
-          💻 DEVELOPER PORTAL • BUILDLEDGER ARCHITECTURE
-        </div>
-        <h1 style="font-size:clamp(2rem, 3.2vw, 2.85rem); margin-top:0;">Developer Portal &amp;<br>Architecture Specifications</h1>
-        <p class="hero-sub" style="max-width:440px;">Explore the PostgreSQL schemas, atomic PL/pgSQL stored procedures, and Dexie.js offline stores that power CrossTech Construction OS (BuildLedger).</p>
-        <div class="hero-ctas" style="margin-top:1.5rem;">
+        <h1>Developer Portal &amp;<br>Architecture Specifications</h1>
+        <p class="hero-sub">Explore the PostgreSQL schemas, atomic PL/pgSQL stored procedures, and Dexie.js offline stores that power CrossTech Construction OS (BuildLedger).</p>
+        <div class="hero-ctas">
           <a href="#schemas" class="btn btn-demo">Explore Database DDL</a>
           <a href="#procedure" class="btn-secondary-glass">View Stored Procedure →</a>
         </div>
       </div>
       <div class="hero-visual" aria-hidden="true">
-        <img src="images/API.png" alt="CrossTech Construction OS Developer Portal and API Documentation" class="hero-img" style="max-height:480px; object-fit:contain; filter:drop-shadow(0 20px 45px rgba(124, 58, 237, 0.4));" />
+        <img src="images/indexHero.png" alt="CrossTech Construction OS Developer Portal and Architecture Specifications" class="hero-img" style="max-height:480px; object-fit:contain; filter:drop-shadow(0 20px 45px rgba(225, 29, 72, 0.4));" />
       </div>
     </div>
   </section>
@@ -176,7 +174,7 @@
           
           <div class="code-box">
 <span style="color:#64748b;">-- Transaction type enum</span>
-<span style="color:#a855f7;">CREATE TYPE</span> txn_type_enum <span style="color:#a855f7;">AS ENUM</span> (
+<span style="color:#f43f5e;">CREATE TYPE</span> txn_type_enum <span style="color:#f43f5e;">AS ENUM</span> (
   <span style="color:#22c55e;">'SANCTION'</span>,   <span style="color:#64748b;">-- Capital injection from Org Wallet</span>
   <span style="color:#22c55e;">'EXPENSE'</span>,    <span style="color:#64748b;">-- Field petty cash debit</span>
   <span style="color:#22c55e;">'ADJUSTMENT'</span>, <span style="color:#64748b;">-- Formal countervailing audit entry</span>
@@ -184,7 +182,7 @@
 );
 
 <span style="color:#64748b;">-- Append-only Double-Entry Ledger</span>
-<span style="color:#a855f7;">CREATE TABLE</span> wallet_transactions (
+<span style="color:#f43f5e;">CREATE TABLE</span> wallet_transactions (
   id <span style="color:#38bdf8;">UUID PRIMARY KEY DEFAULT</span> gen_random_uuid(),
   org_id <span style="color:#38bdf8;">UUID NOT NULL REFERENCES</span> organizations(id),
   site_id <span style="color:#38bdf8;">UUID NOT NULL REFERENCES</span> sites(id),
@@ -197,7 +195,7 @@
   created_at <span style="color:#38bdf8;">TIMESTAMPTZ DEFAULT</span> now()
 );
 
-<span style="color:#a855f7;">CREATE INDEX</span> idx_wallet_txns_org_site <span style="color:#a855f7;">ON</span> wallet_transactions(org_id, site_id, created_at <span style="color:#a855f7;">DESC</span>);
+<span style="color:#f43f5e;">CREATE INDEX</span> idx_wallet_txns_org_site <span style="color:#f43f5e;">ON</span> wallet_transactions(org_id, site_id, created_at <span style="color:#f43f5e;">DESC</span>);
           </div>
         </section>
 
@@ -207,45 +205,45 @@
           <p>Balance modifications strictly pass through <code>process_wallet_transaction()</code> to enforce atomic row locks and verify controlled overdraft floors.</p>
           
           <div class="code-box">
-<span style="color:#a855f7;">CREATE OR REPLACE FUNCTION</span> process_wallet_transaction(
+<span style="color:#f43f5e;">CREATE OR REPLACE FUNCTION</span> process_wallet_transaction(
   p_org_id <span style="color:#38bdf8;">UUID</span>,
   p_site_id <span style="color:#38bdf8;">UUID</span>,
   p_type txn_type_enum,
   p_amount <span style="color:#38bdf8;">NUMERIC</span>,
   p_category <span style="color:#38bdf8;">VARCHAR</span>,
   p_receipt_path <span style="color:#38bdf8;">TEXT</span>
-) <span style="color:#a855f7;">RETURNS</span> <span style="color:#38bdf8;">UUID AS</span> $$
-<span style="color:#a855f7;">DECLARE</span>
+) <span style="color:#f43f5e;">RETURNS</span> <span style="color:#38bdf8;">UUID AS</span> $$
+<span style="color:#f43f5e;">DECLARE</span>
   v_current_bal <span style="color:#38bdf8;">NUMERIC</span>;
   v_overdraft_floor <span style="color:#38bdf8;">NUMERIC</span>;
   v_new_bal <span style="color:#38bdf8;">NUMERIC</span>;
   v_txn_id <span style="color:#38bdf8;">UUID</span>;
-<span style="color:#a855f7;">BEGIN</span>
+<span style="color:#f43f5e;">BEGIN</span>
   <span style="color:#64748b;">-- Acquire exclusive row lock on site record</span>
-  <span style="color:#a855f7;">SELECT</span> current_balance, overdraft_limit 
-  <span style="color:#a855f7;">INTO</span> v_current_bal, v_overdraft_floor
-  <span style="color:#a855f7;">FROM</span> sites <span style="color:#a855f7;">WHERE</span> id = p_site_id <span style="color:#a855f7;">FOR UPDATE</span>;
+  <span style="color:#f43f5e;">SELECT</span> current_balance, overdraft_limit 
+  <span style="color:#f43f5e;">INTO</span> v_current_bal, v_overdraft_floor
+  <span style="color:#f43f5e;">FROM</span> sites <span style="color:#f43f5e;">WHERE</span> id = p_site_id <span style="color:#f43f5e;">FOR UPDATE</span>;
 
-  <span style="color:#a855f7;">IF</span> p_type = <span style="color:#22c55e;">'EXPENSE'</span> <span style="color:#a855f7;">THEN</span>
+  <span style="color:#f43f5e;">IF</span> p_type = <span style="color:#22c55e;">'EXPENSE'</span> <span style="color:#f43f5e;">THEN</span>
     v_new_bal := v_current_bal - p_amount;
-    <span style="color:#a855f7;">IF</span> v_new_bal &lt; -v_overdraft_floor <span style="color:#a855f7;">THEN</span>
-      <span style="color:#a855f7;">RAISE EXCEPTION</span> <span style="color:#22c55e;">'Site overdraft floor reached. Transaction rejected.'</span>;
-    <span style="color:#a855f7;">END IF</span>;
-  <span style="color:#a855f7;">ELSE</span>
+    <span style="color:#f43f5e;">IF</span> v_new_bal &lt; -v_overdraft_floor <span style="color:#f43f5e;">THEN</span>
+      <span style="color:#f43f5e;">RAISE EXCEPTION</span> <span style="color:#22c55e;">'Site overdraft floor reached. Transaction rejected.'</span>;
+    <span style="color:#f43f5e;">END IF</span>;
+  <span style="color:#f43f5e;">ELSE</span>
     v_new_bal := v_current_bal + p_amount;
-  <span style="color:#a855f7;">END IF</span>;
+  <span style="color:#f43f5e;">END IF</span>;
 
   <span style="color:#64748b;">-- Update cached site balance</span>
-  <span style="color:#a855f7;">UPDATE</span> sites <span style="color:#a855f7;">SET</span> current_balance = v_new_bal <span style="color:#a855f7;">WHERE</span> id = p_site_id;
+  <span style="color:#f43f5e;">UPDATE</span> sites <span style="color:#f43f5e;">SET</span> current_balance = v_new_bal <span style="color:#f43f5e;">WHERE</span> id = p_site_id;
 
   <span style="color:#64748b;">-- Insert immutable double-entry record</span>
-  <span style="color:#a855f7;">INSERT INTO</span> wallet_transactions (org_id, site_id, txn_type, amount_inr, balance_after, category, receipt_r2_path, created_by)
-  <span style="color:#a855f7;">VALUES</span> (p_org_id, p_site_id, p_type, p_amount, v_new_bal, p_category, p_receipt_path, auth.uid())
-  <span style="color:#a855f7;">RETURNING</span> id <span style="color:#a855f7;">INTO</span> v_txn_id;
+  <span style="color:#f43f5e;">INSERT INTO</span> wallet_transactions (org_id, site_id, txn_type, amount_inr, balance_after, category, receipt_r2_path, created_by)
+  <span style="color:#f43f5e;">VALUES</span> (p_org_id, p_site_id, p_type, p_amount, v_new_bal, p_category, p_receipt_path, auth.uid())
+  <span style="color:#f43f5e;">RETURNING</span> id <span style="color:#f43f5e;">INTO</span> v_txn_id;
 
-  <span style="color:#a855f7;">RETURN</span> v_txn_id;
-<span style="color:#a855f7;">END</span>;
-$$ <span style="color:#a855f7;">LANGUAGE</span> plpgsql;
+  <span style="color:#f43f5e;">RETURN</span> v_txn_id;
+<span style="color:#f43f5e;">END</span>;
+$$ <span style="color:#f43f5e;">LANGUAGE</span> plpgsql;
           </div>
         </section>
 
@@ -255,12 +253,12 @@ $$ <span style="color:#a855f7;">LANGUAGE</span> plpgsql;
           <p>On-device queue that absorbs subterranean field entries when 4G connectivity is unavailable.</p>
           
           <div class="code-box">
-<span style="color:#a855f7;">import</span> Dexie <span style="color:#a855f7;">from</span> <span style="color:#22c55e;">'dexie'</span>;
+<span style="color:#f43f5e;">import</span> Dexie <span style="color:#f43f5e;">from</span> <span style="color:#22c55e;">'dexie'</span>;
 
-<span style="color:#a855f7;">export class</span> BuildLedgerOfflineDB <span style="color:#a855f7;">extends</span> Dexie {
-  <span style="color:#a855f7;">constructor</span>() {
-    <span style="color:#a855f7;">super</span>(<span style="color:#22c55e;">'BuildLedgerDB'</span>);
-    <span style="color:#a855f7;">this</span>.version(1).stores({
+<span style="color:#f43f5e;">export class</span> BuildLedgerOfflineDB <span style="color:#f43f5e;">extends</span> Dexie {
+  <span style="color:#f43f5e;">constructor</span>() {
+    <span style="color:#f43f5e;">super</span>(<span style="color:#22c55e;">'BuildLedgerDB'</span>);
+    <span style="color:#f43f5e;">this</span>.version(1).stores({
       pending_transactions: <span style="color:#22c55e;">'++local_id, client_uuid, site_id, sync_status, created_at'</span>,
       offline_receipts: <span style="color:#22c55e;">'client_uuid, blob, mime_type'</span>
     });
@@ -321,6 +319,7 @@ $$ <span style="color:#a855f7;">LANGUAGE</span> plpgsql;
   </section>
 
   <!-- FOOTER -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-col footer-brand">
@@ -354,16 +353,71 @@ $$ <span style="color:#a855f7;">LANGUAGE</span> plpgsql;
       <div class="footer-col">
         <h4>Platform</h4>
         <ul>
-          <li><a href="pricing.html">Pricing Plans</a></li>
+          <li><a href="pricing.html">Pricing ($0 – $149/mo)</a></li>
           <li><a href="security.html">Security &amp; PostgreSQL RLS</a></li>
           <li><a href="docs.html">Developer Portal &amp; DDL</a></li>
           <li><a href="about.html">The Anti-Leakage Manifesto</a></li>
-          <li><a href="demo.html">Live Sandbox Demo</a></li>
         </ul>
       </div>
+    </div>
+    <div class="container" style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);text-align:center;">
+      <p style="font-size:0.8125rem;color:#6b7280;line-height:1.6;margin:0;">
+        CrossTech Construction OS — Every Expense Accounted For. Every Project Moving. Every Rupee Traceable.
+      </p>
     </div>
   </footer>
 
   <script src="app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.querySelectorAll('.docs-nav-link');
+      const sections = Array.from(navLinks).map(link => {
+        const id = link.getAttribute('href').slice(1);
+        return document.getElementById(id);
+      }).filter(Boolean);
+
+      function setActiveLink(activeId) {
+        navLinks.forEach(link => {
+          if (link.getAttribute('href') === '#' + activeId) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          const targetId = link.getAttribute('href').slice(1);
+          setActiveLink(targetId);
+        });
+      });
+
+      function onScroll() {
+        const scrollY = window.scrollY;
+        const offset = 180;
+        let currentSectionId = sections[0]?.id;
+
+        for (let i = 0; i < sections.length; i++) {
+          const section = sections[i];
+          const sectionTop = section.offsetTop - offset;
+          if (scrollY >= sectionTop) {
+            currentSectionId = section.id;
+          }
+        }
+
+        if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 120)) {
+          currentSectionId = sections[sections.length - 1]?.id;
+        }
+
+        if (currentSectionId) {
+          setActiveLink(currentSectionId);
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    });
+  </script>
 </body>
 </html>
